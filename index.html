@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muriff | Meet a Hornless Hereford</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f1e7;
+      text-align: center;
+      padding: 2rem;
+      color: #3b2f2f;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+    }
+    .bio {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 0;
+      font-weight: normal;
+      color: #775f4e;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎷 Meet a Member of the Hornless Hereford Jazz Band</h1>
+  <h2>Randomly featured Muriff artist</h2>
+
+  <div id="band-container">
+    <img id="band-img" src="" alt="Band member portrait">
+    <div class="bio" id="band-bio"></div>
+  </div>
+
+  <script>
+    const bandMembers = [
+      {
+        name: "Buck “Strummer” Rawhide – Guitar",
+        img: "images/guitar-bull.png",
+        bio: "Philosopher. Picker. Mood-setter. Buck’s hooves were born to pluck. 'A well-placed E minor can settle a stampede.'"
+      },
+      {
+        name: "Lester “Moo-tone” Brassley – Saxophone",
+        img: "images/sax-bull.png",
+        bio: "Blew his first sax at a cattle auction. Lester’s solos are smoother than a fresh salt lick. He claims Coltrane appeared to him in a dream... eating clover."
+      },
+      {
+        name: "Roscoe “Low-End” Angus – Upright Bass",
+        img: "images/bass-bull.png",
+        bio: "Quiet but deep, Roscoe lays down grooves that make even the surliest ranch hands sway. Only communicates via bass licks and eyebrow raises."
+      },
+      {
+        name: "Clara “Tippy Keys” Belle – Piano",
+        img: "images/piano-bull.png",
+        bio: "Classically trained barn prodigy turned boogie-woogie barnstormer. Clara ditched concert halls for campfires and can go from Chopin to honky-tonk in under four beats."
+      },
+      {
+        name: "Duke “Four-on-the-Hoof” Holstein – Drums",
+        img: "images/drum-bull.png",
+        bio: "Born with rhythm in his veins and cud in his mouth, Duke drives the band with hoof-tight beats and a grin that never quits. Practices on feed buckets when bored."
+      }
+    ];
+
+    const pick = bandMembers[Math.floor(Math.random() * bandMembers.length)];
+    document.getElementById('band-img').src = pick.img;
+    document.getElementById('band-img').alt = pick.name;
+    document.getElementById('band-bio').innerHTML = `<strong>${pick.name}</strong><br>${pick.bio}`;
+  </script>
+</body>
+</html>
