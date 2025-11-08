@@ -2,55 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muriff | Meet a Hornless Hereford</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #f9f1e7;
-      text-align: center;
-      padding: 2rem;
-      color: #3b2f2f;
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'muriff-bg': '#f9f1e7',
+            'muriff-text': '#3b2f2f',
+            'muriff-secondary': '#775f4e',
+          }
+        }
+      }
     }
-    img {
-      max-width: 300px;
-      border-radius: 16px;
-      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
-      margin-bottom: 1rem;
-    }
-    .bio {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 0;
-      font-weight: normal;
-      color: #775f4e;
-    }
-  </style>
+  </script>
 </head>
-<body>
-  <header style="margin-bottom: 2rem;">
-    <h1 style="font-size: 3rem; letter-spacing: 0.1em; margin-bottom: 0.2rem;">MURIFF</h1>
-    <h2 style="font-weight: normal; font-size: 1.25rem; font-style: italic; color: #5a4a3f;">
-      (pronounced “moo-riff”)
+<body class="font-serif bg-muriff-bg text-center p-8 text-muriff-text">
+  <header class="mb-8">
+    <h1 class="text-5xl tracking-widest mb-1">MURIFF</h1>
+    <h2 class="font-normal text-xl italic text-[#5a4a3f]">
+      (pronounced "moo-riff")
     </h2>
   </header>
-  <h1>
+  <h1 class="text-3xl mb-2">
    🎷 Meet a Member of the<br>
     Hornless Hereford Jazz Band
   </h1>
-  <h2>Randomly featured Muriff artist</h2>
+  <h2 class="text-2xl mt-0 font-normal text-muriff-secondary">Randomly featured Muriff artist</h2>
 
   <div id="band-container">
-    <img id="band-img" src="" alt="Band member portrait">
-    <div class="bio" id="band-bio"></div>
+    <img id="band-img" src="" alt="Band member portrait" class="max-w-[300px] rounded-2xl shadow-lg mb-4 mx-auto">
+    <div class="max-w-2xl mx-auto text-lg leading-relaxed" id="band-bio"></div>
   </div>
 
   <script>
@@ -87,12 +71,12 @@
     document.getElementById('band-img').alt = pick.name;
     document.getElementById('band-bio').innerHTML = `<strong>${pick.name}</strong><br>${pick.bio}`;
   </script>
-  <hr style="margin: 3rem 0;">
+  <hr class="my-12">
 
-  <h2>📝 Band Diary</h2>
-  <p><em>Notes from the pasture — updated whenever<br>inspiration (or conflict) strikes.</em></p>
+  <h2 class="text-2xl font-normal text-muriff-secondary">📝 Band Diary</h2>
+  <p class="italic">Notes from the pasture — updated whenever<br>inspiration (or conflict) strikes.</p>
 
-  <div class="diary-entry" style="max-width: 600px; margin: 2rem auto; text-align: left;">
+  <div class="diary-entry max-w-2xl my-8 mx-auto text-left">
     <p><strong>Band Diary</strong><br>
     Hello from the band! We’re really excited to be helping out with the new Fort Worth-based music forum. We don’t know what it is yet, but it smells like potential (and alfalfa).</p>
 
